@@ -1,0 +1,106 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+:root{
+    --white: #fff;
+    --dark: #000;
+}
+body{
+    background-color: #fff;
+}
+
+
+header{
+    width: 100%;
+    height: 70px;
+    border-bottom: 2px solid #000;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    width: 100px;
+    position: relative;
+}
+#account{
+    background-color: #000;
+    display: inline-block;
+    width: 25px;
+    padding: 2px;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+}
+#account:hover{
+    color: #000;
+    background-color: #e4e4e4;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+}
+
+nav img{
+    width: 50px;
+}
+
+
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.item-card{
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 500px;
+    background-color: #e0e0e0;
+}
+
+.item-card img{
+    width: 300px;
+}
+
+
+/* ------------------------- ESTILOS DEL CARRITO ------------------------- */
+
+
+#item-container{
+    width: 500px;
+    margin: auto;
+}
+
+.item{
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+    align-items: center;
+    border: 1px solid #000;
+}
+
+.item img{
+    height: 150px;
+}
+
+.item h3{
+    width: 130px;
+}
+
+#total{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+    margin: auto;
+    gap: 10px;
+}
