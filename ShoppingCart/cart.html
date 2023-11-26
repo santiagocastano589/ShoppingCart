@@ -1,24 +1,39 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styl.css">
-    <title>Cart</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Psycho Cart</title>
 </head>
 <body>
-    <h1>hola</h1>
+	<header>
+		<nav>
+			<h2>𝖘𝖆𝖓𝖙𝖎𝖆𝖌𝖔𝖈𝖓</h2>
+			<div>
+				<a href="#">Inicio</a>
+				<a href="#" target="blanck"><img src="images/shopping-cart.png" alt="Carrito"><span id="cart-account">0</span></a>
+			</div>
+		</nav>
+	</header>
+	<p id="cart-empty">El carrito está vacío, <a href="./index.html">elige algun producto</a></p>
+
     <div id="item-container">
 
     </div>
-    <section id="total">
-        <p>Total unidades: <span id="unidades">0</span></p>     
+
+    <div id="totals">
+        <p>Total unidades: <span id="units">0</span></p>     
         <p>Total Precio: $<span id="price">0</span></p>
         <button disabled>Comprar</button>
-        <button>Reiniciar Carrito</button>
-    </section>
+        <button id="reiniciar">Reiniciar Carrito</button>
+    </div>
     
 </body>
-<script src="js.js"></script>
-<!-- <script src="app.js"></script> -->
+
+<script src="js/products.js"></script>
+<script src="js/cartService.js"></script>
+<script src="js/cart.js"></script>
+
 </html>
