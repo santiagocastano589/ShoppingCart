@@ -79,7 +79,6 @@ function checkMessage() {
   totalsElement.classList.toggle("hidden", !(products && products.length>0));
 }
 
-
-
 checkMessage();
 updateCart();
+
