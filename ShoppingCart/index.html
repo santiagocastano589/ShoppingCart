@@ -24,8 +24,29 @@
         
     </section>
 
+    <button onclick="openAddProductModal()">Agregar Producto</button>
 
+    
+    <div id="productModal" style="display: none;">
+        <label for="productName">Nombre:</label>
+        <input type="text" id="productName">
 
+        <label for="productCategory">Categoría:</label>
+        <input type="text" id="productCategory">
+
+        <label for="productDescription">Descripción:</label>
+        <input type="text" id="productDescription">
+
+        <label for="productImage">Imagen URL:</label>
+        <input type="text" id="productImage">
+
+        <label for="productPrice">Precio:</label>
+        <input type="number" id="productPrice">
+
+        <button id="saveProductBtn" onclick="saveProduct()">Guardar</button>
+        <button onclick="closeProductModal()">Cancelar</button>
+    </div>
+      
 
 </body>
 <script src="js/products.js"></script>

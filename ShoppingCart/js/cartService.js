@@ -1,12 +1,11 @@
 const cartAccount = document.getElementById("cart-account");
 
-//  Toma un objeto producto o un objeto con al menos un ID y lo agrega al carrito  
+
 function addToCart(product){
-  //Reviso si el producto esta en el carrito.
+
   let memory = JSON.parse(localStorage.getItem("items"));
   console.log(memory);
   let finalQuantity=0;
-  //Si no hay localstorage lo creo
   if(memory===null) {
     const newProduct = newProductMemory(product)
     localStorage.setItem("items",JSON.stringify([newProduct]));
@@ -14,17 +13,17 @@ function addToCart(product){
     finalQuantity = 1;
   }
   else {
-    //Si hay localstorage me fijo si el articulo ya esta ahi
+
     const indexProduct = memory.findIndex(item => item.id === product.id)
     console.log(indexProduct);
     const newMemory = memory;
-    //Si el producto no estaa en el carrito lo agrego
+  
     if(indexProduct === -1){
       const newProduct = newProductMemory(product);
       newMemory.push(newProduct);
       finalQuantity = 1;
     } else {
-      //Si el producto esta en el carrito le agrego 1 a la cantidad.
+    
       newMemory[indexProduct].quantity++;
       finalQuantity = newMemory[indexProduct].quantity;
     }
@@ -36,7 +35,6 @@ function addToCart(product){
 }
 
 
-//  Resta una unidad de un producto del carrito
 function subtractToCart(product){
   let memory = JSON.parse(localStorage.getItem("items"));
   let finalQuantity = 0;
@@ -53,14 +51,13 @@ function subtractToCart(product){
 }
 
 
-// Agrega cantidad a un objeto producto 
+
 function newProductMemory(product){
   const newProduct = product;
   newProduct.quantity = 1;
   return newProduct;
 }
 
-/** Actualiza el número del carrito del header */
 function updateCart(){
   let account = 0;
   const memory = JSON.parse(localStorage.getItem("items"));
@@ -71,12 +68,9 @@ function updateCart(){
   cartAccount.innerText = 0;
 }
 
-/** Reinicia el carrito */
 function resetCart(){
   localStorage.removeItem("items");
   updateCart();
 }
-
-
 
 updateCart();
