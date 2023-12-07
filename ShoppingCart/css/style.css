@@ -259,14 +259,12 @@ footer{
 #productModal{
   width: 55%;
   height: 150px;
-
   box-shadow: 0 1px 10px #000;
 }
 
 label{
   margin: 10px;
 }
-
 
 input{
   margin: 10px;
@@ -284,4 +282,60 @@ input{
   border: none;
   border-radius: 10px;
   color: #fff;
+}
+
+/* --------------- ESTILOS DEL MEDIAQUERY --------------- */
+@media(max-width:920px){
+  #productModal{
+    width: 75%;
+  }
+}
+@media(max-width:768px){
+  #container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  #productModal{
+    width: 95%;
+  }
+
+}
+
+@media(max-width: 480px){
+    #container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+    #productModal{
+        text-align: center;
+        padding: 0 10px;
+        width: 95%;
+        height: 250px;
+      }
+      h2{
+        font-size: 20px;
+        width: 100px;
+        }
+      input{
+        width: 60%;
+        margin: 7px 3px;
+      }
+      label{
+        padding: 5px 15px;
+      }
+      #autor{
+        font-size: 15px;
+      }
+      #searchInput{
+        width: 300px;
+        font-size: 10px;
+      }
+      #item-container{
+        width: 450px;
+      }
+      #totals{
+        width: 450px;
+      }
 }
