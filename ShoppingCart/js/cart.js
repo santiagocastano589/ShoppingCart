@@ -17,9 +17,9 @@ function cartProducts() {
       <h3>${product.name}</h3>
       <span>$</span><p>${product.price}</p>
       <div class="product">
-      <button>-</button>
+      <button class="rest">-</button>
       <span class="cant">${product.quantity}</span>
-      <button>+</button>
+      <button class="sum">+</button>
       </div>
       `;
       itemsContainer.appendChild(newItem);

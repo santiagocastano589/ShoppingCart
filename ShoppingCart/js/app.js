@@ -15,9 +15,9 @@ function showProducts(products) {
         <p class="description">${product.description}</p>
         <p class="category">Categoria: ${product.category}</p>
         <p class="price">$${product.price}</p>
-        <button>Agregar Al Carrito</button>
-        <button onclick="editProduct(${product.id})">Editar</button>
-        <button onclick="deleteProduct(${product.id})">Eliminar</button>
+        <button id="add-cart">Agregar Al Carrito</button>
+        <button class="btn-action" onclick="editProduct(${product.id})">Editar</button>
+        <button class="btn-action" onclick="deleteProduct(${product.id})">Eliminar</button>
 
         </div>
         `;

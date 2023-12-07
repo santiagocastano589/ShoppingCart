@@ -17,6 +17,7 @@ header{
   width: 100%;
   height: 70px;
   border-bottom: 2px solid #000;
+  box-shadow: 2px 4px 20px #000;
 }
 header a{
   text-decoration: none;
@@ -64,10 +65,7 @@ nav img{
   border: none;
   width: 90%;
 }
-#lupa{
-  width: 30px;
-  height: 30px;
-}
+
 
 #container{
   display: flex;
@@ -78,7 +76,6 @@ nav img{
 }
 
 .item-card{
-  /* box-shadow: 1px 1px 7px #000; */
   border-radius: 10px;
   padding: 10px;
   max-width: 700px;
@@ -92,11 +89,20 @@ nav img{
 
 .item-card img{
   width: 350px;
-  height: 450px;
+  height: 440px;
 }
 
-.item-card button{
-  width: 300px;
+.item-card #add-cart{
+  width: 100%;
+  padding: 10px;
+  border-radius: 7px;
+  border: none;
+  background-color: #000;
+  color: #e0e0e0;
+  margin: 10px 0;
+}
+.btn-action{
+  width: 49%;
   padding: 10px;
   border-radius: 7px;
   border: none;
@@ -116,7 +122,11 @@ nav img{
   text-align: justify;
 }
 .name{
-  margin: 10px 0;
+  height: 30px;
+  margin: 15px 0;
+}
+.description{
+  height: 100px;
 }
 .category{
   margin: 10px 0;
@@ -133,6 +143,18 @@ nav img{
 }
 
 
+footer{
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  height: 70px;
+  border-top: 2px solid #000;
+  box-shadow: 20px 1px 20px #000;
+}
+
+
 /* ------------------------- ESTILOS DEL CARRITO ------------------------- */
 
 
@@ -146,7 +168,12 @@ nav img{
   gap: 20px;
   margin: 20px 0;
   align-items: center;
-  border: 1px solid #000;
+  border: 2px solid #000;
+}
+.card-product:hover{
+  transform: translateY(-3px);
+  transition: 0.6s;
+  box-shadow: 3px 7px 10px #000;
 }
 
 .card-product img{
@@ -156,7 +183,13 @@ nav img{
 .card-product h3{
   width: 130px;
 }
-
+.sum,.rest{
+  font-weight: bold;
+  padding: 5px;
+  border: none;
+  background-color: #000;
+  color: #ffffff;
+}
 
 #totals{
   display: flex;
@@ -167,7 +200,26 @@ nav img{
   margin: auto;
   gap: 10px;
 }
-
+#price-total, #units-total{
+  font-weight: 600;
+}
+#totals span{
+  color: #5cb81f;
+}
+#totals button{
+  width: 50%;
+  padding: 10px;
+  border-radius: 7px;
+  border: none;
+  background-color: #000;
+  color: #e0e0e0;
+  margin: 10px 0;
+}
+#totals button:hover{
+  transform: translateY(-5px);
+  transition: 0.5s;
+  box-shadow: 3px 3px 10px #000;
+}
 #cart-empty{
   padding: 10px;
   margin: 5px;
@@ -180,35 +232,56 @@ nav img{
   visibility: hidden;
 }
 
-/* ------------------- AGREGAR UN NUEVO PRODUCTO ------------------------ */
 
-
-#container-box{
+/* --------------- ESTILOS DEL APARTADO PARA AGREGAR Y EDITAR PRODUCTOS --------------- */
+#buttons{
   display: flex;
-  max-width: 1200px;
-  margin: auto;
   justify-content: center;
-  height: 500px;
-}
-
-#elements{
-  border: 1px solid #000;
-  display: flex;
-  flex-direction: column;
-  padding: 30px;
   align-items: center;
+  flex-direction: column;
+}
+#btn-add{
+  margin: 30px;
+  width: 200px;
+  padding: 15px;
+  background-color: #000;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
 }
 
-label, input{
+#btn-add:hover{
+  cursor: pointer;
+  transform: translateY(-3px);
+  transition: 0.2s;
+}
+
+#productModal{
+  width: 55%;
+  height: 150px;
+
+  box-shadow: 0 1px 10px #000;
+}
+
+label{
   margin: 10px;
 }
 
+
 input{
-  padding: 7px;
-  background-color: #e0e0e0;
-  border-radius: 5px;
+  margin: 10px;
+  text-align: center;
+  border: none;
+  padding: 5px;
+  background-color: #e7e7e7;
+  border-radius: 3px;
 }
 
-#cart-img{
-      width: 100px;
+#closeProductBtn,#saveProductBtn{
+  width: 100px;
+  padding: 10px;
+  background-color: #000;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
 }
